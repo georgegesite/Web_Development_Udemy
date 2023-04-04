@@ -1,0 +1,172 @@
+h1 {
+    display: block;
+    font-size: 3em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #222831; 
+}
+h2,h3
+{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    line-height: 2;
+    color: #393e46;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    width: 70%;
+    margin: auto auto;
+}
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+.mountain{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.cloud-top{
+    display: block;
+    position: absolute;
+    left: 1100px;   
+    top: 0px;
+    margin-top: 10px;
+}
+.profile-pic{
+    padding-top: 10px;
+    height:250px;
+    width: 250px;
+}
+.cloud-bottom{   
+    display: block;
+    position: absolute;
+    right: 1100px;
+}
+.center-div{
+  
+    display: inline-block;
+}
+.top-container{
+    background-color: #9b72aa;
+    border: solid;
+    border-width: 5px;
+    padding-top: 50px;
+    position: relative;
+}
+.middle-container{
+    background-color: #c6b4ce;
+    border: solid;
+    border-width: 5px;
+    border-top: 0px;
+    padding-bottom: 50px;
+}
+.bottom-container{
+    padding-top: 20px;
+    background-color: #fff5de;
+    border: solid;
+    border-width: 5px;
+    border-top: 0px;
+  
+    margin: auto auto;
+    
+}
+span{
+    font-size: 30px;
+    font-weight: bold;
+}
+hr{
+    border: dotted #dd0d7f 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+}
+.skill-row{
+    width: 70%;
+    margin: 100px auto;
+    text-align: left    ;
+    line-height: 2;
+}
+.basketball-img{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+.editor-img{
+    width: 25%;    
+    float: right;
+}
+.btn {
+    background: #9b72aa;
+    background-image: -webkit-linear-gradient(top, #9b72aa, #c6b4ce);
+    background-image: -moz-linear-gradient(top, #9b72aa, #c6b4ce);
+    background-image: -ms-linear-gradient(top, #9b72aa, #c6b4ce);
+    background-image: -o-linear-gradient(top, #9b72aa, #c6b4ce);
+    background-image: linear-gradient(to bottom, #9b72aa, #c6b4ce);
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 50px auto;
+  }
+  .btn:hover {
+    background: #fff5de;
+    background-image: -webkit-linear-gradient(top, #fff5de, #fff5de);
+    background-image: -moz-linear-gradient(top, #fff5de, #fff5de);
+    background-image: -ms-linear-gradient(top, #fff5de, #fff5de);
+    background-image: -o-linear-gradient(top, #fff5de, #fff5de);
+    background-image: linear-gradient(to bottom, #fff5de, #fff5de);
+    text-decoration: none;
+    margin: 50px auto;
+  }
+  .footer-link{
+    margin:100px 50px;
+    
+  }
+  a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .hoy-isbog{
+    margin-bottom: 3em;
+  }
+  .george-footer{
+    margin-top: 20px;
+  }
+/* Adjust the font size for smaller screens 
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    p { 
+        font-size: 0.8em;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+/* Adjust the layout for smaller screens 
+@media only screen and (max-width: 800px) {
+    .top-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mid-container, .bottom-container {
+        height: 100px;
+    }
+}*/

@@ -1,0 +1,15 @@
+body{
+    background-color: skyblue;
+}
+hr{
+    background-color: white;
+    border-style: dotted none none;
+    width: 5%;
+    border-color: red;
+    border-width: 20px;
+   
+}
+h1,h3{
+    color:cyan;
+}
+

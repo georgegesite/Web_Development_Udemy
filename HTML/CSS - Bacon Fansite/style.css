@@ -1,0 +1,13 @@
+.bacon{
+    background-color: red;
+}
+.circular{
+    border-radius: 20%;
+}
+#heading{
+    color: red;
+}
+
+img:hover{
+    background-color: green;
+}
