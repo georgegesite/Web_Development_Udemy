@@ -15,6 +15,23 @@ title{
     font-family: 'Ubuntu', sans-serif;
 }
 
+.title-image {
+    width: 8%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+  }
+  #title {
+    background-color: #ff4c68;
+    color: #fff;
+    text-align: left;
+  }
+  
+  #title .container-fluid {
+    padding: 3% 15% 7%;
+  }
+  
+  
 .container-fluid{
     padding: 3% 15%;
 }
@@ -102,3 +119,47 @@ p{
     width: 15%;
     margin: 20px 20px 50px;
 }
+
+/* Pricing Section */
+
+#pricing {
+    padding: 100px;
+  }
+  
+  .price-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .pricing-column {
+    padding: 3% 2%;
+  }
+
+  /* CTA Section */
+
+#cta{
+    background-color: #ff4c68;
+    color: #fff;
+    padding: 7% 15%;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  /* Footer Section */
+
+
+.social-icon {
+    margin: 20px 10px;
+  }
+  
+  @media (max-width: 1028px) {
+  
+    #title {
+      text-align: center;
+    }
+  
+    .title-image {
+      position: static;
+      transform: rotate(0);
+    }
+  }
