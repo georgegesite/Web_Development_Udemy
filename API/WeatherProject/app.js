@@ -21,11 +21,18 @@ app.get("/", function(req,res){
         //    const Object = JSON.stringify(object);
         //    console.log(Object);
 
-            const temp = weatherData.weather[0].description;
-            console.log(temp);
+            const temp = weatherData.main.temp;
+            const weatherDescription = weatherData.weather[0].description;
+            const icon = weatherData.weather[0].icon;
+            // console.log(temp);
+            const imageURL = "https://openweathermap.org/img/wn/"+icon+"@2x.png";
+            res.write("<h1> The description of Manila is " + weatherDescription +".</h1>");
+            res.write("<h1> The temperature of Manila is " + temp +" Kelvin.</h1>");
+            res.write("<img src ="+ imageURL+ ">");
+            res.send()
         })
     })
-    res.send("Server is up and running")
+  
 })
 app.listen (3000, function (){
     console.log("server is running on port 3000");
