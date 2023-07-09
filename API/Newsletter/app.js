@@ -56,7 +56,9 @@ app.post("/failure", function(res, req)
 {
     res.redirect("/");
 })
-app.listen(3000, function () {
+
+//port change for heroku
+app.listen(process.env.PORT || 3000, function () {
     console.log("server is running on port 3000");
 })
 
