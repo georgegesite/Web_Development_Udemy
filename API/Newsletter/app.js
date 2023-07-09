@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser")
-const requrest = require("request");
+const request = require("request");
 const https = require("https");
 
 const app = express();
@@ -34,7 +34,7 @@ app.post("/", function (req, res) {
     const url = 'https://us21.api.mailchimp.com/3.0/lists/087eca132c'
     const options = {
         method: "POST",
-        auth: "georgedeveloper:2ed658003883d561ae72f3e57fb25a0b-us21",
+        auth: "georgedeveloper:7c416ba7ad60752324214f3b55f7fe4f-us21",
     }
     const request = https.request(url, options, function (response) {
 
@@ -63,4 +63,5 @@ app.listen(process.env.PORT || 3000, function () {
 })
 
 // API KEY: 2ed658003883d561ae72f3e57fb25a0b-us21
+// 7c416ba7ad60752324214f3b55f7fe4f-us21
 // ID 087eca132c
