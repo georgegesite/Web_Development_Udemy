@@ -37,6 +37,12 @@ app.post("/", function (req, res) {
         auth: "georgedeveloper:2ed658003883d561ae72f3e57fb25a0b-us21",
     }
     const request = https.request(url, options, function (response) {
+
+        if (response.statusCode == 200)
+        {
+            res.sendFile(__dirname + "/success.html")
+        }
+        else res.sendFile(__dirname + "/failure.html")
         response.on("data", function (data) {
             console.log(JSON.parse(data));
         })
@@ -44,6 +50,11 @@ app.post("/", function (req, res) {
     request.write(jsonData);
     request.end();
 
+})
+
+app.post("/failure", function(res, req)
+{
+    res.redirect("/");
 })
 app.listen(3000, function () {
     console.log("server is running on port 3000");
