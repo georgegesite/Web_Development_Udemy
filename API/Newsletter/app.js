@@ -54,7 +54,7 @@ app.post("/", function (req, res) {
 
 app.post("/failure", function(res, req)
 {
-    res.redirect("/");
+    res.redirect("/"); // res redirect is not a function
 })
 
 //port change for heroku
