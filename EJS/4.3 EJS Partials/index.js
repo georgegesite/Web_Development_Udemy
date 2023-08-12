@@ -25,3 +25,22 @@ app.get("/contact", (req, res) =>{
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
+function plusMinus(arr) {
+  // Write your code here
+  // print the positives, negatives, and e zeros
+  let numZero = 0;
+  let numPositive = 0;
+  let numNegative = 0;
+  let arraySize = arr.length;
+  for (let i = 0; i < arraySize; i++) {
+    if (arr[i] > 0) {
+      numPositive += 1;
+    } else if (arr[i] < 0) {
+      numNegative += 1;
+    } else if (arr[i] === 0) {
+      numZero += 1;
+    }
+  }
+}
