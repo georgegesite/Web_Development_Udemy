@@ -1,0 +1,23 @@
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+
+    <body>
+        <% if (locals.fruits) { %>
+        <ul>
+            <% fruits.forEach((fruit) => { %>
+            <li>
+                <%= fruit %>
+            </li>
+            <%  }) %>
+        </ul>
+
+        <% } %>
+
+    </body>
+
+    <footer>
+        <%- include('footer') %>
+    </footer>
+</body>

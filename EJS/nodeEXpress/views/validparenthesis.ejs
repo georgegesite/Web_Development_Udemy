@@ -1,0 +1,19 @@
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+<h1>Valid Parentheses Problem</h1>
+<p>Link: <a href="https://leetcode.com/problems/valid-parentheses/?envType=featured-list&envId=top-interview-questions?envType=featured-list&envId=top-interview-questions"> Leetcode</a></p>
+<% if (locals.FinalAnswer) { %>
+    <h1>The string <%= sstring %> is <%= FinalAnswer %>.</h1>
+    <% } else { %>
+      <h1>Enter (){}[] Characters below 👇</h1>
+      <% } %>
+        <form action="/validparenthesissubmit" method="POST">
+          <input type="text" name="string" placeholder="Enter String">
+          <input type="submit" value="OK">
+        </form>
+    <footer>
+        <%- include('footer') %>
+    </footer>
+</body>
