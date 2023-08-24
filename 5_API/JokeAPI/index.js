@@ -16,7 +16,6 @@ app.post("/submit", async (req, res) => {
     try {
     const category = req.body.answer;
       const result = await axios.get(`https://v2.jokeapi.dev/joke/${category}?type=single`);
-      console.log(result)
       res.render("index.ejs", {
         theJoke: result.data.joke,
       });
