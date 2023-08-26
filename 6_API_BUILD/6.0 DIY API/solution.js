@@ -30,9 +30,9 @@ app.get("/filter", (req, res) => {
 // Post a new joke
 app.post("/jokes", (req, res) => {
   const newJoke = {
-    id: jokes.length + 1,
-    jokeText: req.body.text,
-    jokeType: req.body.type,
+    id: jokes.length + 1, // add to the end of the list 
+    jokeText: req.body.text, // text input of the user
+    jokeType: req.body.type, // type of joke entered by the user
   };
   jokes.push(newJoke);
   console.log(jokes.slice(-1));

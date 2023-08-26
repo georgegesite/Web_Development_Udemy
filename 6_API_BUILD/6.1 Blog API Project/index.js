@@ -41,15 +41,52 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Write your code here//
 
 //CHALLENGE 1: GET All posts
+app.get("/posts", (req,res) =>{
+  console.log(posts);
+  res.json(posts);
+});
 
 //CHALLENGE 2: GET a specific post by id
-
+app.get("/posts/:id", (req, res) =>{
+  const id = parseInt(req.params.id); // make sure id is int
+  const requestedPosts = posts.find((posting)=> posting.id === id);
+  if(!requestedPosts) res.status(404).json({message: "Post not found"}); else res.json(requestedPosts);
+});
 //CHALLENGE 3: POST a new post
+app.post("/posts", (req, res) =>{
+  const newId = posts.length + 1;
+  const newPost = {
+    id: newId,
+    title: req.body.title,
+    content: req.body.content,
+    author: req.body.author,
+    date: new Date(),
+  }
+  lastId = newId;
+  posts.push(newPost);
+  res.status(201).json(newPost);
+})
 
 //CHALLENGE 4: PATCH a post when you just want to update one parameter
+app.patch("/posts/:id", (req, res) => {
+  const post = posts.find((p) => p.id === parseInt(req.params.id));
+  if (!post) return res.status(404).json({ message: "Post not found" });
 
+  if (req.body.title) post.title = req.body.title;
+  if (req.body.content) post.content = req.body.content;
+  if (req.body.author) post.author = req.body.author;
+
+  res.json(post);
+});
 //CHALLENGE 5: DELETE a specific post by providing the post id.
 
+app.delete("/posts/:id", (req, res) => {
+  const index = posts.findIndex((p) => p.id === parseInt(req.params.id));
+  if (index === -1) return res.status(404).json({ message: "Post not found" });
+
+  posts.splice(index, 1);
+  res.json({ message: "Post deleted" });
+});
 app.listen(port, () => {
   console.log(`API is running at http://localhost:${port}`);
 });
