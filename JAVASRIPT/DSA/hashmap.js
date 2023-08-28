@@ -1,4 +1,6 @@
-var hashmap = {};
+var hashmap = {
+    "google":"2"
+};
 
 // add item to hashmap
 
