@@ -14,16 +14,12 @@ var needle = "ll"
 
 
 var strStr = function(haystack, needle) {
-
-    for(let i = 0; i <haystack.length;i++)
-    {
+    for(let i = 0; i <haystack.length;i++){
         var s = haystack.slice(i,needle.length+i);
         if(needle == s) {
             return i;
             break;
         }
-
-
     }
     return -1;
 };

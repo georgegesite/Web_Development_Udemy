@@ -39,13 +39,8 @@ const WorkTodo = mongoose.model('worktodolist', workSchema)
 
 
 
-async function requestTask() {
-  const tasks = await Todo.find();
-  tasks.forEach(function (task) {
-    items.push(task.name);
-    console.log(task.name);
-  })
-}
+
+var workItems = [];
 async function requestWorkTask() {
   const tasks = await WorkTodo.find();
   tasks.forEach(function (task) {
@@ -53,9 +48,17 @@ async function requestWorkTask() {
     console.log(task.name);
   })
 }
-var items = []; // get data from database
-var workItems = [];
 requestWorkTask();
+
+var items = []; // get data from database
+async function requestTask() {
+  const tasks = await Todo.find();
+  tasks.forEach(function (task) {
+    items.push(task.name);
+    console.log(task.name);
+  })
+}
+
 requestTask();
 app.get("/", function (req, res) {
 
@@ -89,11 +92,12 @@ app.post("/delete", function (req, res) {
       name: deleteItem
     });
     console.log(`Sucessfully deleted ${deleteItem}`);
+    res.redirect("/");
   }
   items = [];
   requestTask();
   deletePeople();
-  res.redirect("/");
+
 
 })
 
