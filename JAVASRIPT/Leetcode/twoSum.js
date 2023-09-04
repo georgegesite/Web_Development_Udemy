@@ -1,19 +1,12 @@
 var twoSum = function(nums, target) {
-    const hashmap ={};
+var hashmap  = {};
+for (let i=0;i< nums.length ;i++){
 
-    for (let i = 0;i < nums.length; i++)
-    {
-        var complement = target - nums[i];
-
-        if (complement in hashmap)
-        {
-            return [hashmap[complement], i]
-        }
-
-        hashmap[nums[i]] = i;
-        console.log(hashmap);
-    }
-    return [];
+    var complement = target - nums[i];
+    if(complement in hashmap) return [hashmap[complement], i];
+    hashmap[nums[i]] =i;
+}
+return[];
 };
 
 
