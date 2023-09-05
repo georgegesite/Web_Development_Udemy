@@ -11,7 +11,7 @@ var isPalindrome = function(s) {
 
 };
 
-var s = "A man, a plan, a canal: Panama";
+var s = "Todd erases a red dot";
 console.log(isPalindrome(s));
 
 // Input: s = "A man, a plan, a canal: Panama"

@@ -41,6 +41,25 @@ append(data) {
   // Increase the size of the linked list by 1 to reflect the addition of the new node
   this.size++;
 }
+  // Reverse the linked list
+  reverse() {
+    let prev = null;
+    let current = this.head;
+    let next = null;
+
+    while (current !== null) {
+      // Store the next node
+      next = current.next;
+      // Reverse the pointer of the current node
+      current.next = prev;
+      // Move prev and current one step forward
+      prev = current;
+      current = next;
+    }
+
+    // Update the head of the reversed list
+    this.head = prev;
+  }
   
     // Insert a new node at a specific position in the list
     insert(data, index) {
@@ -137,4 +156,5 @@ append(data) {
   console.log(linkedList.toArray()); // Output: [1, 4, 3]
   
   console.log(linkedList.getSize()); // Output: 3
-  
+  linkedList.reverse();
+  console.log("Reversed List:", linkedList.toArray()); // Output: [3, 2, 1]

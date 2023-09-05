@@ -9,4 +9,9 @@ for(let i = string.length -1;i >= 0; i--)
 }
 console.log(revString2);
 
-
+var revString3= ""
+for(let i = 0; i < string.length ;i++)
+{
+    revString3  = string[i] +revString3;
+}
+console.log(revString3);
