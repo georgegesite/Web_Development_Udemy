@@ -2,7 +2,7 @@ var isPalindrome = function(s) {
 
     if (s == "" || s == " ")return true;
     
-    var removeWhiteSpaces = s.replace(/\s/g, "");
+    var removeWhiteSpaces = s.replace(/ /g, "");
     var removeNonalphchar = removeWhiteSpaces.replace(/[^a-zA-Z0-9]/g, '');
     var originalString = removeNonalphchar.toLowerCase();
     var reversedString = originalString.split('').reverse().join('');

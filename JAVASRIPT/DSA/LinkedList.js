@@ -28,8 +28,7 @@ append(data) {
     let current = this.head;
 
     // Traverse the list to find the last node (where "next" is null)
-    while (current.next) {
-      console.log(current.next);
+    while (current.next!=null) {
       current = current.next;
     }
 
@@ -138,16 +137,24 @@ append(data) {
   
       return result;
     }
+
+    merge(){
+  
+    }
   }
   
   // Example usage:
   const linkedList = new LinkedList();
+  const linkedList2 = new LinkedList();
   
   linkedList.append(1);
   linkedList.append(2);
   linkedList.append(3);
+  linkedList2.append(4);
+  linkedList2.append(5);
   
   console.log(linkedList.toArray()); // Output: [1, 2, 3]
+  console.log(linkedList2.toArray());
   
   linkedList.insert(4, 1); // Insert 4 at index 1
   console.log(linkedList.toArray()); // Output: [1, 4, 2, 3]

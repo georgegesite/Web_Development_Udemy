@@ -13,14 +13,21 @@ var needle = "ll"
 // console.log(s);
 
 
-var strStr = function(haystack, needle) {
-    for(let i = 0; i <haystack.length;i++){
-        let s = haystack.slice(i,needle.length+i);
-        if(needle == s) {
-            return i;
-            break;
-        }
-    }
+// var strStr = function(haystack, needle) {
+//     for(let i = 0; i <haystack.length;i++){
+//         let s = haystack.slice(i,needle.length+i);
+//         if(needle == s) {
+//             return i;
+//             break;
+//         }
+//     }
+//     return -1;
+// };
+
+var strStr = function(haystack, needle) { //cheating way
+    if(haystack.includes(needle))
+    return (haystack.indexOf(needle)); 
+    else
     return -1;
 };
 

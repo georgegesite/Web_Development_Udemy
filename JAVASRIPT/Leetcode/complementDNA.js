@@ -26,4 +26,4 @@ function dnaComplement(s) {
 
 const inputDNA = "ATCGTTCCGGAAATGCGATGC";
 const complement = dnaComplement(inputDNA);
-console.log(complement);  // Output: "TAGC"
+console.log(complement);   
