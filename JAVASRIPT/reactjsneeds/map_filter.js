@@ -3,19 +3,22 @@
 
 let names = ["Pedro","JAck","Jessica"];
 
-names.map((name)=>{
+const try1 = names.map((name)=>{
     return name + "1"
 });
+console.log(try1);
 // example react below
 
-names.map((name) => {
-return <h1> {names} </h1>
+const try2 = names.map((name) => {
+// return <h1> {names} </h1>;
 });
+console.log(try2);
 // below uses filter
 
-names.filter((name) => {
+const try3 = names.filter((name) => {
     return name !== "Pedro"
 });
+console.log(try3);
 // some other concepts that are useful
 
 //Async
