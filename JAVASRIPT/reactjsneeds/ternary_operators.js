@@ -20,3 +20,7 @@ let name2 = age > 10 ? "Pedro" : "Jack";
 const Component  = () => {
     return age > 10 ? <div> Pedro</div> : <div>Jack</div>;
 }
+
+isLoggedIn ? <h1>Hello</h1> : <Login />
+isLoggedIn ? <h1>Hello</h1> : null    // if no need for else
+isLoggedIn && <h1>Hello</h1> 
