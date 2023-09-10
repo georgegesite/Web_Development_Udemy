@@ -6,7 +6,7 @@ var twoSum = function(nums,nums2,  target) {
         {
             hashmap[nums[i]] = i;
         }
-        console.log(hashmap);
+        // console.log(hashmap);
         for (let i = 0; i < nums2.length; i++)
         {
             var complement = target - nums2[i];

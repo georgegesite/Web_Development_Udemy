@@ -6,6 +6,7 @@ var majorityElement = function(nums) {
     {
             if (count === 0) res = nums[i];
             if (res === nums[i]) count++; else count--;
+            console.log(count);
             
     }
     return res;
@@ -13,4 +14,5 @@ var majorityElement = function(nums) {
 
 
     var  nums = [2,2,1,1,1,2,2]
+              // 1,2,1,0,1,0
     console.log(majorityElement(nums));
