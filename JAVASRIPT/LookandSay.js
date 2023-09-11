@@ -1,20 +1,26 @@
 function encodeString(test, times) {
-    let encoded = "";
-    for (let i = 0; i < times; i++) {
-      let count = 1;
-  
-      for (let j = 0; j < test.length; j++) {
-        if (test[j] === test[j + 1]) {
-          count++;
-        } else {
-          encoded += count.toString() + test[j];
-          count = 1;
-        }
+  let encoded = "";
+
+  test = String(test);
+  console.log(test);
+  for(let i = 0 ; i < times; i++){
+    let count = 1;
+
+    for (let j = 0; j < test.length; j++){
+      if(test[j] === test[j+1])
+      { 
+        count ++;
       }
-      test = encoded;
-      encoded = "";
-      console.log(test);
+      else{
+        encoded += String(count) + String(test[j]);
+        count = 1;  
+      }
+  
     }
+    test = encoded;
+    console.log(test);
+    encoded = "";
+  }
   }
   
   const testString = "1";
