@@ -22,6 +22,7 @@ function arrShift(arr,shift)
     }
     return arr;
 }
+console.log("hello");
 
 console.log(arrShift(arr,shift));
 
