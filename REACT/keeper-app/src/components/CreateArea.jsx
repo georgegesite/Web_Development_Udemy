@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
+import axios from "axios";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -10,6 +11,8 @@ function CreateArea(props) {
     title: "",
     content: ""
   });
+
+
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -23,13 +26,33 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
-    setNote({
-      title: "",
-      content: ""
-    });
     event.preventDefault();
+  
+    const newNote = {
+      title: note.title,
+      content: note.content
+    };
+  
+    // Replace 'your_backend_api_url' with the actual URL of your backend API endpoint
+    axios.post('http://localhost:4000/todolist/add', newNote)
+      .then(response => {
+        console.log("Note added successfully:", response.data);
+        // Optionally, you can handle any UI updates or state changes here
+        // For example, if you want to update the list of notes, you can call a function passed through props
+        props.onAdd(response.data);
+        
+        // Clear the form fields
+        setNote({
+          title: "",
+          content: ""
+        });
+      })
+      .catch(error => {
+        console.error("Error adding note:", error);
+        // Handle the error or provide feedback to the user
+      });
   }
+  
 
   function expand() {
     setExpanded(true);
