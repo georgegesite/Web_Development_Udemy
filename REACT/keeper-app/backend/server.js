@@ -29,7 +29,6 @@ const todolistRouter = require('./routes/todo');
 app.use('/todolist', todolistRouter);
 
 //test router for fronted
-//day 2 test
 
 
 
