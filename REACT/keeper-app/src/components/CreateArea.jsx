@@ -33,14 +33,13 @@ function CreateArea(props) {
       content: note.content
     };
   
-    // Replace 'your_backend_api_url' with the actual URL of your backend API endpoint
     axios.post('http://localhost:4000/todolist/add', newNote)
       .then(response => {
         console.log("Note added successfully:", response.data);
-        // Optionally, you can handle any UI updates or state changes here
-        // For example, if you want to update the list of notes, you can call a function passed through props
-        props.onAdd(response.data);
-        
+  
+        // Update the local state with the new note immediately
+        setNote(prevNotes => [...prevNotes, response.data]);
+  
         // Clear the form fields
         setNote({
           title: "",
@@ -52,6 +51,7 @@ function CreateArea(props) {
         // Handle the error or provide feedback to the user
       });
   }
+  
   
 
   function expand() {
