@@ -3,3 +3,6 @@ import ReactDom from 'react-dom';
 import App from "./components/App";
 
 ReactDom.render(<App />, document.getElementById("root"));
+
+//edit and redo front end to connect to the backend and databse
+//
