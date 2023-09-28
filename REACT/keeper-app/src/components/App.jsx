@@ -30,13 +30,15 @@ function App() {
       .then(response => {
         console.log("Note deleted successfully:", response.data);
         
-        // Remove the deleted note from the state
-        setNotes(prevNotes => prevNotes.filter((note, index) => index !== id));
+        // Remove the deleted note from the state based on its 'id' property
+        setNotes(prevNotes => prevNotes.filter(note => note.id !== id));
       })
       .catch(error => {
         console.error("Error deleting note:", error);
       });
   }
+  
+  
 
   return (
     <div>

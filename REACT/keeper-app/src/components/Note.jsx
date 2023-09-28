@@ -3,6 +3,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 
 function Note(props) {
   function handleClick() {
+    console.log("Delete button clicked for id:", props.id);
     props.onDelete(props.id);
   }
 
@@ -14,6 +15,7 @@ function Note(props) {
       <button onClick={handleClick}>
         <DeleteIcon />
       </button>
+      {/* <a href="/" onClick={(e) => { e.preventDefault(); props.onDelete(props.id); }}></a> */}
     </div>
   );
 }
