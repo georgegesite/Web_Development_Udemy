@@ -14,18 +14,14 @@ function CreateArea(props) {
 
   function handleChange(event) {
     const { name, value } = event.target;
-
-    setNote(prevNote => {
-      return {
-        ...prevNote,
-        [name]: value
-      };
-    });
+    setNote(prevNote => ({
+      ...prevNote,
+      [name]: value
+    }));
   }
 
   function submitNote(event) {
     event.preventDefault();
-
     const newNote = {
       title: note.title,
       content: note.content
@@ -34,10 +30,8 @@ function CreateArea(props) {
     axios.post('http://localhost:4000/todolist/add', newNote)
       .then(response => {
         console.log("Note added successfully:", response.data);
-
-        // Use the onAdd function from props to add the new note to the parent component's state
+        // Call the onAdd function passed from App component to update notes state
         props.onAdd(response.data);
-
         // Clear the form fields
         setNote({
           title: "",

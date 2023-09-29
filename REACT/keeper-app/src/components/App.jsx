@@ -30,24 +30,24 @@ function App() {
       .then(response => {
         console.log("Note deleted successfully:", response.data);
         
-        // Remove the deleted note from the state based on its 'id' property
-        setNotes(prevNotes => prevNotes.filter(note => note.id !== id));
+        // Remove the deleted note from the state based on its '_id' property
+        setNotes(prevNotes => prevNotes.filter(note => note._id !== id));
       })
       .catch(error => {
         console.error("Error deleting note:", error);
       });
   }
   
-  
-
   return (
     <div>
       <Header />
-      <CreateArea onAdd={addNote} />
-      {notes.map((noteItem, index) => (
+      <CreateArea onAdd={newNote => { // Pass a function to CreateArea component
+        addNote(newNote); // Call the addNote function to update notes
+      }} />
+      {notes.map((noteItem) => (
         <Note
-          key={index}
-          id={index}
+          key={noteItem._id}
+          id={noteItem._id} // Pass the actual _id property as id
           title={noteItem.title}
           content={noteItem.content}
           onDelete={deleteNote}
