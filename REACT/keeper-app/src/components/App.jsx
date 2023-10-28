@@ -23,7 +23,7 @@ function App() {
     // Add the new note to the state
     setNotes(prevNotes => [...prevNotes, newNote]);
   }
-
+//comment
   function deleteNote(id) {
     // Send a DELETE request to your backend
     axios.delete(`http://localhost:4000/todolist/${id}`)
