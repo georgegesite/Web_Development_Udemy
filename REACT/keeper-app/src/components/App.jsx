@@ -25,6 +25,7 @@ function App() {
   }
 //comment
 //comment for this
+//third comment for this
   function deleteNote(id) {
     // Send a DELETE request to your backend
     axios.delete(`http://localhost:4000/todolist/${id}`)
