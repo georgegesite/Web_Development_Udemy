@@ -21,6 +21,7 @@ function App() {
 
   function addNote(newNote) {
     // Add the new note to the state
+    //comments
     setNotes(prevNotes => [...prevNotes, newNote]);
   }
 //comment
