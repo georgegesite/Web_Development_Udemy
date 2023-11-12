@@ -44,7 +44,7 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAdd={newNote => { // Pass a function to CreateArea component
+      <CreateArea onAdd={newNote => { // Pass a functio    n to CreateArea component
         addNote(newNote); // Call the addNote function to update notes
       }} />
       {notes.map((noteItem) => (
