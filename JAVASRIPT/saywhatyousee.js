@@ -17,6 +17,6 @@ return encoded;
 }
 
 
-var test = "AABBCCC";
+var test = "AAAABBCCC";
 console.log(sayWhatyouSee(test));
 

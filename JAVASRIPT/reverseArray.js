@@ -1,5 +1,5 @@
 const a = [1, 2, 7, 6, 4, 9, 12];
-console.log(a.reverse());
+console.log(a);
 for (let t = 0; t < a.length / 2; t++) {
   const tmp = a[t];
   a[t] = a[a.length - t - 1];
