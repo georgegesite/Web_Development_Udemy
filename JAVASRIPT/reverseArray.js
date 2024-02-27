@@ -12,3 +12,4 @@ console.log(a); // Output: [12, 9, 4, 6, 7, 2, 1]
 nums = [1, 2, 3];
 nums.reverse();
 console.log(nums);
+// okay
